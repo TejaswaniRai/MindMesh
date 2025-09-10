@@ -1,0 +1,98 @@
+{
+  "1": {
+    "CSE-101": {
+      "09:00-10:00": { "batchName": "B.Tech CSE (AIML) 2024", "courseName": "Programming in C", "teacherName": "Dr. Anirban Sen", "start_time": "09:00", "end_time": "10:00" },
+      "10:00-11:00": { "batchName": "B.Tech CSE (AIML) 2023", "courseName": "Data Structures", "teacherName": "Prof. Priya Nair", "start_time": "10:00", "end_time": "11:00" }
+    },
+    "CSE-102": {
+      "11:00-12:00": { "batchName": "B.Tech CSE 2025", "courseName": "Discrete Mathematics", "teacherName": "Dr. Rahul Mehta", "start_time": "11:00", "end_time": "12:00" }
+    },
+    "CSE-103": {
+      "14:00-15:00": { "batchName": "B.Tech CSE 2024", "courseName": "Operating Systems", "teacherName": "Ms. Debasmita Saha", "start_time": "14:00", "end_time": "15:00" }
+    },
+    "CSE-104": {
+      "15:00-16:00": { "batchName": "B.Tech CSE 2024", "courseName": "Computer Networks", "teacherName": "Mr. Subrata Paul", "start_time": "15:00", "end_time": "16:00" }
+    },
+    "CSE-201": {
+      "16:00-17:00": { "batchName": "B.Tech CSE (AIML) 2023", "courseName": "Database Systems", "teacherName": "Dr. Sonali Mondal", "start_time": "16:00", "end_time": "17:00" }
+    },
+    "CSE-401": {
+      "11:00-12:00": { "batchName": "B.Tech CSE 2024", "courseName": "DBMS Lab", "teacherName": "Mr. Rajat Gupta", "start_time": "11:00", "end_time": "12:00" },
+      "12:00-13:00": { "batchName": "B.Tech CSE 2024", "courseName": "DBMS Lab", "teacherName": "Mr. Rajat Gupta", "start_time": "12:00", "end_time": "13:00" }
+    }
+  },
+  "2": {
+    "CSE-101": {
+      "11:00-12:00": { "batchName": "B.Tech CSE 2023", "courseName": "Design & Analysis of Algorithms", "teacherName": "Dr. Shubham Roy", "start_time": "11:00", "end_time": "12:00" }
+    },
+    "CSE-102": {
+      "09:00-10:00": { "batchName": "B.Tech CSE 2025", "courseName": "Probability & Statistics", "teacherName": "Prof. Manas Saha", "start_time": "09:00", "end_time": "10:00" }
+    },
+    "CSE-201": {
+      "14:00-15:00": { "batchName": "B.Tech CSE (AIML) 2024", "courseName": "Artificial Intelligence", "teacherName": "Dr. Priyanka Saha", "start_time": "14:00", "end_time": "15:00" },
+      "15:00-16:00": { "batchName": "B.Tech CSE (AIML) 2024", "courseName": "Machine Learning", "teacherName": "Dr. Amit Roy", "start_time": "15:00", "end_time": "16:00" }
+    },
+    "CSE-202": {
+      "10:00-11:00": { "batchName": "B.Tech CSE 2024", "courseName": "Web Technologies", "teacherName": "Ms. Lisa Verma", "start_time": "10:00", "end_time": "11:00" }
+    },
+    "CSE-501": {
+      "14:00-15:00": { "batchName": "B.Tech CSE 2024", "courseName": "Operating Systems Lab", "teacherName": "Mr. Karthik Iyer", "start_time": "14:00", "end_time": "15:00" },
+      "15:00-16:00": { "batchName": "B.Tech CSE 2024", "courseName": "Operating Systems Lab", "teacherName": "Mr. Karthik Iyer", "start_time": "15:00", "end_time": "16:00" }
+    }
+  },
+  "3": {
+    "CSE-103": {
+      "09:00-10:00": { "batchName": "B.Tech CSE 2025", "courseName": "Computer Organization", "teacherName": "Dr. Arindam Ghosh", "start_time": "09:00", "end_time": "10:00" },
+      "10:00-11:00": { "batchName": "B.Tech CSE 2025", "courseName": "Microprocessors", "teacherName": "Prof. Soumya Banerjee", "start_time": "10:00", "end_time": "11:00" }
+    },
+    "CSE-104": {
+      "14:00-15:00": { "batchName": "B.Tech CSE 2024", "courseName": "Software Engineering", "teacherName": "Prof. David Thomas", "start_time": "14:00", "end_time": "15:00" }
+    },
+    "CSE-203": {
+      "15:00-16:00": { "batchName": "B.Tech CSE 2023", "courseName": "Cyber Security", "teacherName": "Dr. James Wilson", "start_time": "15:00", "end_time": "16:00" }
+    },
+    "CSE-502": {
+      "09:00-10:00": { "batchName": "B.Tech CSE 2025", "courseName": "Data Structures Lab", "teacherName": "Ms. Ritu Malhotra", "start_time": "09:00", "end_time": "10:00" },
+      "10:00-11:00": { "batchName": "B.Tech CSE 2025", "courseName": "Data Structures Lab", "teacherName": "Ms. Ritu Malhotra", "start_time": "10:00", "end_time": "11:00" }
+    }
+  },
+  "4": {
+    "CSE-101": {
+      "14:00-15:00": { "batchName": "B.Tech CSE 2024", "courseName": "DBMS Lab", "teacherName": "Dr. Emily Davis", "start_time": "14:00", "end_time": "15:00" }
+    },
+    "CSE-102": {
+      "15:00-16:00": { "batchName": "B.Tech CSE 2024", "courseName": "Compiler Design", "teacherName": "Mr. Subrata Paul", "start_time": "15:00", "end_time": "16:00" }
+    },
+    "CSE-201": {
+      "09:00-10:00": { "batchName": "B.Tech CSE (AIML) 2024", "courseName": "Deep Learning", "teacherName": "Prof. Alex Rodrigues", "start_time": "09:00", "end_time": "10:00" }
+    },
+    "CSE-202": {
+      "11:00-12:00": { "batchName": "B.Tech CSE 2024", "courseName": "Cloud Computing", "teacherName": "Ms. Debasmita Saha", "start_time": "11:00", "end_time": "12:00" }
+    },
+    "CSE-401": {
+      "11:00-12:00": { "batchName": "B.Tech CSE 2024", "courseName": "Computer Networks Lab", "teacherName": "Mr. Sandeep Mishra", "start_time": "11:00", "end_time": "12:00" },
+      "12:00-13:00": { "batchName": "B.Tech CSE 2024", "courseName": "Computer Networks Lab", "teacherName": "Mr. Sandeep Mishra", "start_time": "12:00", "end_time": "13:00" }
+    }
+  },
+  "5": {
+    "CSE-101": {
+      "09:00-10:00": { "batchName": "B.Tech CSE 2023", "courseName": "Theory of Computation", "teacherName": "Dr. Usha Raman", "start_time": "09:00", "end_time": "10:00" }
+    },
+    "CSE-103": {
+      "10:00-11:00": { "batchName": "B.Tech CSE 2025", "courseName": "Linear Algebra", "teacherName": "Dr. Sabyasachi Chandra", "start_time": "10:00", "end_time": "11:00" }
+    },
+    "CSE-104": {
+      "11:00-12:00": { "batchName": "B.Tech CSE 2024", "courseName": "Operating Systems Lab", "teacherName": "Mr. Rajat Gupta", "start_time": "11:00", "end_time": "12:00" }
+    },
+    "CSE-201": {
+      "14:00-15:00": { "batchName": "B.Tech CSE 2024", "courseName": "Big Data Analytics", "teacherName": "Dr. Sonali Mondal", "start_time": "14:00", "end_time": "15:00" }
+    },
+    "CSE-202": {
+      "15:00-16:00": { "batchName": "B.Tech CSE 2024", "courseName": "Distributed Systems", "teacherName": "Dr. Amit Roy", "start_time": "15:00", "end_time": "16:00" }
+    },
+    "CSE-501": {
+      "14:00-15:00": { "batchName": "B.Tech CSE 2024", "courseName": "AI & ML Lab", "teacherName": "Ms. Nandini Sharma", "start_time": "14:00", "end_time": "15:00" },
+      "15:00-16:00": { "batchName": "B.Tech CSE 2024", "courseName": "AI & ML Lab", "teacherName": "Ms. Nandini Sharma", "start_time": "15:00", "end_time": "16:00" }
+    }
+  }
+}

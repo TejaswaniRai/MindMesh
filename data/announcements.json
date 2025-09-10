@@ -1,0 +1,46 @@
+[
+  {
+    "title": "jdvxdxv,j,dx",
+    "description": "demo :)",
+    "date": "2025-09-09",
+    "id": "20ef9d38-fb6e-4b28-832b-cb42e68f8f0c",
+    "createdAt": "2025-09-09T15:41:02.318Z",
+    "replies": [
+      {
+        "id": "reply_1757433686989_hftpcqiki",
+        "content": "hello",
+        "author": "admin",
+        "authorName": "Administrator",
+        "createdAt": "2025-09-09T16:01:26.989Z"
+      },
+      {
+        "id": "reply_1757433698833_1eop3aha6",
+        "content": "hi",
+        "author": "student",
+        "authorName": "Student",
+        "createdAt": "2025-09-09T16:01:38.833Z"
+      },
+      {
+        "id": "reply_1757434578162_3bkluuey0",
+        "content": "checking",
+        "author": "admin",
+        "authorName": "Administrator",
+        "createdAt": "2025-09-09T16:16:18.162Z"
+      },
+      {
+        "id": "reply_1757434601734_cq9brkb38",
+        "content": "me",
+        "author": "student",
+        "authorName": "Student",
+        "createdAt": "2025-09-09T16:16:41.734Z"
+      },
+      {
+        "id": "reply_1757434649656_vgv1brly4",
+        "content": "demo",
+        "author": "student",
+        "authorName": "Student",
+        "createdAt": "2025-09-09T16:17:29.656Z"
+      }
+    ]
+  }
+]
