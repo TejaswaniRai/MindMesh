@@ -56,15 +56,17 @@ Our solution ensures **real-time scheduling, live room availability, and instant
    git clone https://github.com/TejaswaniRai/MindMesh.git
    cd MindMesh
 2. **Install dependencies**
+   ```bash
     npm install
-3. **Run**
+4. **Run**
+   ```bash
    npm run dev
 
 ---
 
 ## 🌍 Deployment
 
-coming soon
+🎉 Live Demo: [mind-mesh-a184.vercel.app](https://mind-mesh-a184.vercel.app)
 
 ---
 
