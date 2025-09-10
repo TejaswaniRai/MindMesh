@@ -2,10 +2,10 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { useRef, useEffect } from 'react'
+// import { useRef, useEffect } from 'react'
 import * as THREE from 'three'
-import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { extend } from '@react-three/fiber'
+import { Canvas, useFrame } from '@react-three/fiber'
+// import { extend } from '@react-three/fiber'
 import { OrbitControls, Text } from '@react-three/drei'
 import { ClassroomCard } from './classroom-card'
 import { TimeSlot } from '@/lib/schedule-store'
@@ -29,9 +29,9 @@ interface Floor {
 
 // 3D Floor Visualization with interactive selection and tooltip
 const FloorModel = ({ rooms, onRoomSelect }: { rooms: Room[], onRoomSelect: (roomNumber: string) => void }) => {
-  const { viewport, camera } = useThree()
+  // const { viewport, camera } = useThree()
   const [hoveredRoom, setHoveredRoom] = React.useState<string | null>(null)
-  const [selectedRoom, setSelectedRoom] = React.useState<string | null>(null)
+  // const [selectedRoom, setSelectedRoom] = React.useState<string | null>(null)
   const groupRef = React.useRef<THREE.Group>(null)
 
   // Animate pulsing effect for free rooms
@@ -63,7 +63,7 @@ const FloorModel = ({ rooms, onRoomSelect }: { rooms: Room[], onRoomSelect: (roo
   }
 
   const handleClick = (roomNumber: string) => {
-    setSelectedRoom(roomNumber)
+    // setSelectedRoom(roomNumber)
     onRoomSelect(roomNumber)
   }
 
@@ -90,7 +90,7 @@ const FloorModel = ({ rooms, onRoomSelect }: { rooms: Room[], onRoomSelect: (roo
               : '#eab308'
 
           const isHovered = hoveredRoom === room.roomNumber
-          const isSelected = selectedRoom === room.roomNumber
+          // const isSelected = selectedRoom === room.roomNumber
 
           return (
             <group
@@ -99,7 +99,7 @@ const FloorModel = ({ rooms, onRoomSelect }: { rooms: Room[], onRoomSelect: (roo
               onPointerOver={(e) => handlePointerOver(e, room.roomNumber)}
               onPointerOut={handlePointerOut}
               onClick={() => handleClick(room.roomNumber)}
-              scale={isSelected ? 1.2 : 1}
+              scale={1}
             >
               <mesh userData={{ status: room.status }}>
                 <boxGeometry args={[2.5, 0.1, 2.5]} />
@@ -156,10 +156,10 @@ interface FloorViewProps {
 }
 
 export const FloorView = ({ floor, currentSlot, onRoomClick, view = '2d' }: FloorViewProps) => {
-  const [selectedRoom, setSelectedRoom] = React.useState<string | null>(null)
+  // const [selectedRoom, setSelectedRoom] = React.useState<string | null>(null)
 
   const handleRoomSelect = (roomNumber: string) => {
-    setSelectedRoom(roomNumber)
+    // setSelectedRoom(roomNumber)
     onRoomClick?.(roomNumber)
   }
 

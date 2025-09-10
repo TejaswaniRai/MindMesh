@@ -15,7 +15,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { useToast } from '@/components/ui/use-toast'
-import type { Announcement, Reply } from '@/types/index'
+import type { Announcement } from '@/types/index'
 
 const announcementSchema = z.object({
   title: z.string().min(1, 'Title is required'),

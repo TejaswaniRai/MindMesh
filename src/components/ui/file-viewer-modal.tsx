@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 import { 
   Download, 
   ExternalLink, 
@@ -130,9 +131,11 @@ export function FileViewerModal({ material, isOpen, onClose, onDownload }: FileV
                     />
                   ) : isImage ? (
                     <div className="flex items-center justify-center h-full">
-                      <img
+                      <Image
                         src={material.fileUrl}
                         alt={material.title}
+                        width={800}
+                        height={600}
                         className="max-w-full max-h-full object-contain rounded-lg shadow-lg"
                         onError={(e) => {
                           console.error('Image load error:', e)

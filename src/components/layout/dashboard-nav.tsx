@@ -13,7 +13,7 @@ export function DashboardNav({ userRole }: DashboardNavProps) {
   const pathname = usePathname()
   
   const isAdmin = userRole === 'admin'
-  const isStudent = userRole === 'student'
+  // const isStudent = userRole === 'student'
   const isFaculty = userRole === 'faculty'
   
   // Base links for all users

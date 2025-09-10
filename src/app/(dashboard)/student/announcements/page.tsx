@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import { useToast } from '@/components/ui/use-toast'
-import type { Announcement, Reply } from '@/types/index'
+import type { Announcement } from '@/types/index'
 
 // Fetch announcements
 async function fetchAnnouncements(): Promise<Announcement[]> {

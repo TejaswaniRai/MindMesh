@@ -14,10 +14,11 @@ const updateAnnouncementSchema = z.object({
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const announcement = await announcementsStore.getById(params.id)
+    const { id } = await params
+    const announcement = await announcementsStore.getById(id)
     if (!announcement) {
       return NextResponse.json({ error: 'Announcement not found' }, { status: 404 })
     }
@@ -30,13 +31,14 @@ export async function GET(
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const body = await request.json()
     const validatedData = updateAnnouncementSchema.parse(body)
 
-    const announcement = await announcementsStore.update(params.id, validatedData)
+    const { id } = await params
+    const announcement = await announcementsStore.update(id, validatedData)
     if (!announcement) {
       return NextResponse.json({ error: 'Announcement not found' }, { status: 404 })
     }
@@ -52,10 +54,11 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const deleted = await announcementsStore.delete(params.id)
+    const { id } = await params
+    const deleted = await announcementsStore.delete(id)
     if (!deleted) {
       return NextResponse.json({ error: 'Announcement not found' }, { status: 404 })
     }

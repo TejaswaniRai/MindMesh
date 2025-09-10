@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { Search, Filter, Download, Eye } from 'lucide-react'
 import { StudyMaterialList } from '@/components/ui/study-material-list'
 import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
+// import { Button } from '@/components/ui/button'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 
 export default function StudentStudyMaterialsPage() {

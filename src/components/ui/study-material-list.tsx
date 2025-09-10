@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { 
   Download, 
   FileText, 
@@ -125,7 +126,7 @@ export function StudyMaterialList({ isAdmin = false }: StudyMaterialListProps) {
           description: 'This is a sample file for demonstration purposes.',
         })
       }
-    } catch (error) {
+    } catch {
       toast({
         title: 'Download failed',
         description: 'Could not download the file. Please try again.',
@@ -166,7 +167,7 @@ export function StudyMaterialList({ isAdmin = false }: StudyMaterialListProps) {
           description: 'This is a sample file for demonstration purposes.',
         })
       }
-    } catch (error) {
+    } catch {
       toast({
         title: 'File access failed',
         description: 'Could not open the file. Please try downloading it.',
@@ -422,9 +423,11 @@ export function StudyMaterialList({ isAdmin = false }: StudyMaterialListProps) {
                 </div>
               ) : previewMaterial.fileType.includes('image') ? (
                 <div className="flex justify-center h-full">
-                  <img
+                  <Image
                     src={previewMaterial.fileUrl}
                     alt={previewMaterial.title}
+                    width={800}
+                    height={600}
                     className="max-w-full max-h-full object-contain rounded-lg"
                     onError={() => {
                       toast({

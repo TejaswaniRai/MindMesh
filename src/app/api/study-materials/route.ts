@@ -5,7 +5,19 @@ const createDummyPdfUrl = () => {
   return 'dummy-pdf-sample'
 }
 
-let materials: any[] = [
+const materials: Array<{
+  id: string
+  title: string
+  description: string
+  fileUrl: string
+  fileName: string
+  fileType: string
+  fileSize: number
+  uploadedBy: string
+  uploadedAt: string
+  subject: string
+  batch: string
+}> = [
   {
     id: '1',
     title: 'Introduction to React',

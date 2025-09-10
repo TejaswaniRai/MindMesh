@@ -144,13 +144,13 @@ function coerceRegularClasses(raw: unknown): RegularClassesMap | null {
         out[dayNum][room] = {};
         Object.entries(slots || {}).forEach(([slot, booking]) => {
           if ((TIME_SLOTS as readonly string[]).includes(slot)) {
-            const b = booking as any;
+            const b = booking as unknown as Record<string, unknown>;
             const normalized: BookingDetails = {
-              batchName: b?.batchName ?? b?.batch_name ?? '',
-              teacherName: b?.teacherName ?? b?.teacher_name ?? b?.TeacherName,
-              courseName: b?.courseName ?? b?.course ?? b?.Course,
-              startTime: b?.startTime ?? b?.start_time,
-              endTime: b?.endTime ?? b?.end_time
+              batchName: (b?.batchName as string) ?? (b?.batch_name as string) ?? '',
+              teacherName: (b?.teacherName as string) ?? (b?.teacher_name as string) ?? (b?.TeacherName as string),
+              courseName: (b?.courseName as string) ?? (b?.course as string) ?? (b?.Course as string),
+              startTime: (b?.startTime as string) ?? (b?.start_time as string),
+              endTime: (b?.endTime as string) ?? (b?.end_time as string)
             };
             (out[dayNum][room] as Partial<Record<TimeSlot, BookingDetails>>)[slot as TimeSlot] = normalized;
           }

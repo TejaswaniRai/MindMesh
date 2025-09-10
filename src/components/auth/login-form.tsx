@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { UserRole } from "@/types"
-import { Eye, EyeOff, Mail, Lock, User, Loader2, UserPlus } from "lucide-react"
+import { Eye, EyeOff, Mail, Lock, User, Loader2 } from "lucide-react"
 
 export function LoginForm() {
   const router = useRouter()

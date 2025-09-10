@@ -10,13 +10,14 @@ const replySchema = z.object({
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const body = await request.json()
     const validatedData = replySchema.parse(body)
 
-    const announcement = await announcementsStore.getById(params.id)
+    const { id } = await params
+    const announcement = await announcementsStore.getById(id)
     if (!announcement) {
       return NextResponse.json({ error: 'Announcement not found' }, { status: 404 })
     }
@@ -34,7 +35,7 @@ export async function POST(
     }
 
     announcement.replies.push(reply)
-    await announcementsStore.update(params.id, { replies: announcement.replies })
+    await announcementsStore.update(id, { replies: announcement.replies })
 
     return NextResponse.json(reply, { status: 201 })
   } catch (error) {

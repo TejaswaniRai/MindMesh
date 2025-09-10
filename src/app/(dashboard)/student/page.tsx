@@ -9,7 +9,7 @@ import { getCurrentTimeSlot, TIME_SLOTS, type TimeSlot, isStaffRoom } from '@/li
 import { FloorView } from '@/components/ui/floor-view'
 import { RoomBookingsModal } from '@/components/ui/room-bookings-modal'
 import { ScheduleCalendar } from '@/components/ui/schedule-calendar'
-import type { Floor, Room, RoomStatus } from '@/types/floor'
+import type { Floor, RoomStatus } from '@/types/floor'
 
 interface BookingDetails {
   batchName: string
@@ -42,7 +42,7 @@ function transformScheduleData(schedule: DailySchedule, currentSlot: string): Fl
 
       const isStaff = isStaffRoom(roomNumber)
       // Student behavior: occupied/free strictly for the selected time slot (or staff room)
-      const bookingForSelected = (roomSchedule as any)[currentSlot as string] || null
+      const bookingForSelected = (roomSchedule as Record<string, BookingDetails | null>)[currentSlot as string] || null
       const isOccupiedAtSelected = isStaff || Boolean(bookingForSelected)
       
       return {
@@ -56,11 +56,11 @@ function transformScheduleData(schedule: DailySchedule, currentSlot: string): Fl
             }
           : bookingForSelected
             ? {
-                batchName: (bookingForSelected as any).batchName,
+                batchName: bookingForSelected.batchName,
                 timeSlot: '',
-                lectureName: (bookingForSelected as any).courseName || 'Lecture',
-                teacherName: (bookingForSelected as any).teacherName,
-                courseName: (bookingForSelected as any).courseName
+                lectureName: bookingForSelected.courseName || 'Lecture',
+                teacherName: bookingForSelected.teacherName,
+                courseName: bookingForSelected.courseName
               }
             : undefined
       }

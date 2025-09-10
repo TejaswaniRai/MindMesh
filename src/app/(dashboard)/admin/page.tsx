@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useMemo } from 'react'
-import { useQuery, useMutation, useQueryClient, useQueries } from '@tanstack/react-query'
+import { useMutation, useQueryClient, useQueries } from '@tanstack/react-query'
 import { motion } from 'framer-motion'
 import { getCurrentTimeSlot, TIME_SLOTS, isStaffRoom } from '@/lib/schedule-store'
 import { BookingModal } from '@/components/ui/booking-modal'
@@ -31,7 +31,7 @@ interface BookingRequest {
 }
 
 async function bookClassroom({ roomNumber, timeSlot, batchName, date, teacherName, courseName }: BookingRequest) {
-  if (!date || (typeof date !== 'string' && !(date as any).toISOString)) {
+  if (!date || (typeof date !== 'string' && !(date as Date).toISOString)) {
     throw new Error('Invalid date value provided for booking')
   }
   const dateString = typeof date === 'string' ? date : (date as Date).toISOString()
@@ -55,17 +55,18 @@ interface BookingDetails {
   courseName?: string;
 }
 
-interface DailySchedule {
-  [roomNumber: string]: {
-    [timeSlot in typeof TIME_SLOTS[number]]?: BookingDetails | null;
-  };
-}
+// interface DailySchedule {
+//   [roomNumber: string]: {
+//     [timeSlot in typeof TIME_SLOTS[number]]?: BookingDetails | null;
+//   };
+// }
 
-interface Schedule extends DailySchedule {
-  dates: {
-    [date: string]: DailySchedule;
-  };
-}
+// Remove unused interface
+// interface Schedule extends DailySchedule {
+//   dates: {
+//     [date: string]: DailySchedule;
+//   };
+// }
 
 export default function AdminDashboard() {
   const { toast } = useToast()
@@ -163,7 +164,7 @@ export default function AdminDashboard() {
 
         const isStaff = isStaffRoom(roomNumber)
         // Admin/faculty behavior: availability strictly for the selected time slot
-        const bookingForSelected = (roomSchedule as any)[selectedTimeSlot as string] || null
+        const bookingForSelected = (roomSchedule as Record<string, BookingDetails | null>)[selectedTimeSlot as string] || null
         const isOccupiedAtSelected = isStaff || Boolean(bookingForSelected)
 
         return {
@@ -179,9 +180,9 @@ export default function AdminDashboard() {
               }
             : bookingForSelected
               ? {
-                  batchName: (bookingForSelected as any).batchName,
-                  teacherName: (bookingForSelected as any).teacherName,
-                  courseName: (bookingForSelected as any).courseName,
+                  batchName: bookingForSelected.batchName,
+                  teacherName: bookingForSelected.teacherName,
+                  courseName: bookingForSelected.courseName,
                   timeSlot: '',
                   lectureName: 'Lecture'
                 }
@@ -208,9 +209,9 @@ export default function AdminDashboard() {
   }, [floorData, upcomingBookings])
 
   // Handler to update selectedDate when clicking on upcoming booking
-  const handleUpcomingBookingClick = (date: string) => {
-    setSelectedDate(new Date(date))
-  }
+  // const handleUpcomingBookingClick = (date: string) => {
+  //   setSelectedDate(new Date(date))
+  // }
 
   // Mutation for booking
   const bookMutation = useMutation({

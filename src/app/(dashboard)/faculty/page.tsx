@@ -13,7 +13,7 @@ function DashboardCard({
 }: { 
   title: string
   count: number
-  icon: any
+  icon: React.ComponentType<{ className?: string }>
   href: string
   color: string 
 }) {
@@ -102,7 +102,7 @@ export default function FacultyDashboard() {
             Sample Schedule
           </h2>
           <p className="text-white/70 mb-4">
-            Today's classroom bookings and schedules.
+            Today&apos;s classroom bookings and schedules.
           </p>
           <div className="space-y-2 text-sm text-white/60">
             <p>• <strong>Room 101:</strong> CS2024A - Dr. Sarah Johnson (09:00-10:00)</p>
