@@ -64,9 +64,9 @@ Our solution ensures **real-time scheduling, live room availability, and instant
 
 ---
 
-## 🌍 Deployment
+## 🌍 Deployment  
 
-🎉 Live Demo: [mind-mesh-a184.vercel.app](https://mind-mesh-a184.vercel.app)
+🎉 Live Demo: [mind-mesh.netlify.app](https://68c1fd007fd61f520036f31f--mind-mesh.netlify.app/login)  
 
 ---
 
